@@ -1,0 +1,75 @@
+.hero{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;    
+}
+
+label{
+    margin: 0 5px 0 20px;
+}
+
+.filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(190, 190, 190);
+    max-width: 900px;
+    border-radius: 10px;
+    margin-top: 10px;
+    
+}
+
+.filter-iten{
+    margin: 15px;
+    align-items: center;
+}
+
+#cardsQ, #cardsT, #cardsF{
+    border: 1px solid #b8adad;
+    border-radius: 10px;
+    padding: 8px;
+    min-width: 140px;
+}
+
+.bt-filter{
+    border-radius: 10px;
+    background: rgb(50, 49, 53);
+    color: #ffffff;
+    width: 90px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.bt-filter:hover{
+    color: #030574;
+}
+
+.body-page{    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#cards{
+    margin: 0 auto;
+    display: flex;    
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;
+}
+.card{
+    flex: 1;
+    width: 250px;
+}
+
+.card-img{
+    max-width: 250px;
+    cursor: pointer;
+    transition: all linear 0.7s;
+}
+
+.card-img:hover{
+    
+    transform: scale(1.1);
+}
