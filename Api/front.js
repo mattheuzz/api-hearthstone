@@ -2,221 +2,191 @@ const cards = document.getElementById('cards')
 const cardsQ = document.getElementById('cardsQ')
 const cardsF = document.getElementById('cardsF')
 const cardsT = document.getElementById('cardsT')
+const cardsC = document.getElementById('cardsC')
 
 const selected = () => {
     const valor = cardsQ.value
     if (valor == 'qCommon') {
-        qCommon()
+        const parametQ = 'common'
+        qualitie(parametQ)
         console.log(valor)
     } else if (valor == 'qFree') {
-        qFree()
+        const parametQ = 'free'
+        qualitie(parametQ)
         console.log(valor)
     } else if (valor == 'qRare') {
-        qRare()
+        const parametQ = 'rare'
+        qualitie(parametQ)
         console.log(valor)
     } else if (valor == 'qEpic') {
-        qEpic()
+        const parametQ = 'epic'
+        qualitie(parametQ)
         console.log(valor)
     } else if (valor == 'qLegendary') {
-        qLegendary()
+        const parametQ = 'legendary'
+        qualitie(parametQ)
         console.log(valor)
     }
     const tvalor = cardsT.value
     if (tvalor == 'hero') {
-        tHero()
+        const parametT = 'hero'
+        type(parametT)
         console.log(tvalor)
     } else if (tvalor == 'minion') {
-        tMinion()
+        const parametT = 'minion'
+        type(parametT)
         console.log(tvalor)
     } else if (tvalor == 'spell') {
-        tSpell()
+        const parametT = 'spell'
+        type(parametT)
         console.log(tvalor)
     } else if (tvalor == 'weapon') {
-        tWeapon()
+        const parametT = 'weapon'
+        type(parametT)
         console.log(tvalor)
     } else if (tvalor == 'enchantment') {
-        tEnchantment()
+        const parametT = 'enchantment'
+        type(parametT)
         console.log(tvalor)
     } else if (tvalor == 'hero-power') {
-        tHeroPower()
+        const parametT = 'hero-power'
+        type(parametT)
         console.log(tvalor)
+    }
+    const fvalor = cardsF.value
+    if (fvalor == 'neutral') {
+        const parametF = 'neutral'
+        factions(parametF)
+        console.log(fvalor)
+    } else if (fvalor == 'horde') {
+        const parametF = 'horde'
+        factions(parametF)
+        console.log(fvalor)
+    } else if (fvalor == 'alliance') {
+        const parametF = 'alliance'
+        factions(parametF)
+        console.log(fvalor)
+    }
+    const cvalor = cardsC.value
+    if (cvalor == 'death-knight') {
+        const parametC = 'death-knight'
+        classes(parametC)
+        console.log(cvalor)
+    } else if (cvalor == 'druid') {
+        const parametC = 'druid'
+        classes(parametC)
+        console.log(cvalor)
+    } else if (cvalor == 'mage') {
+        const parametC = 'mage'
+        classes(parametC)
+        console.log(cvalor)
+    } else if (cvalor == 'paladin') {
+        const parametC = 'paladin'
+        classes(parametC)
+        console.log(cvalor)
+    } else if (cvalor == 'priest') {
+        const parametC = 'priest'
+        classes(parametC)
+        console.log(cvalor)
+    } else if (cvalor == 'hunter') {
+        const parametC = 'hunter'
+        classes(parametC)
+        console.log(cvalor)
+    } else if (cvalor == 'rogue') {
+        const parametC = 'rogue'
+        classes(parametC)
+        console.log(cvalor)
+    } else if (cvalor == 'shaman') {
+        const parametC = 'shaman'
+        classes(parametC)
+        console.log(cvalor)
+    } else if (cvalor == 'warlock') {
+        const parametC = 'warlock'
+        classes(parametC)
+        console.log(cvalor)
+    } else if (cvalor == 'warrior') {
+        const parametC = 'warrior'
+        classes(parametC)
+        console.log(cvalor)
+    } else if (cvalor == 'neutral') {
+        const parametC = 'neutral'
+        classes(parametC)
+        console.log(cvalor)
+    } else if (cvalor == 'dream') {
+        const parametC = 'dream'
+        classes(parametC)
+        console.log(cvalor)
+    } else if (cvalor == 'whizbang') {
+        const parametC = 'whizbang'
+        classes(parametC)
+        console.log(cvalor)
+    } else if (cvalor == 'demon-hunter') {
+        const parametC = 'demon-hunter'
+        classes(parametC)
+        console.log(cvalor)
     }
 }
 
-async function qFree(){
+async function qualitie(parametQ){
     cards.innerHTML += ``
-    const qualitieFree = await fetch ('http://localhost:3000/qualities/free')
-    const free = await qualitieFree.json()
-    free.map((itenFree) => {
-        if (itenFree.img){
-            const boxfree =`
+    const qualitieRota = await fetch (`http://localhost:3000/qualities/${parametQ}`)
+    const listQualitie = await qualitieRota.json()
+    listQualitie.map((itenQualitie) => {
+        if (itenQualitie.img){
+            const boxqualitie =`
                 <div class="card">
-                    <img class='card-img' src='${itenFree.img}'>
+                    <img class='card-img' src='${itenQualitie.img}'>
                 </div>`
 
-            cards.innerHTML += boxfree
+            cards.innerHTML += boxqualitie
         }
     })
 }
 
-async function qCommon(){
+async function type(parametT){
     cards.innerHTML += ``
-    const qualitieCommon = await fetch ('http://localhost:3000/qualities/common')
-    const common = await qualitieCommon.json()
-    common.map((itemCommon) => {
-        if (itemCommon.img){
-            const boxCommon =`
+    const typeRota = await fetch (`http://localhost:3000/types/${parametT}`)
+    const listType = await typeRota.json()
+    listType.map((itenType) => {
+        if (itenType.img){
+            const boxType =`
                 <div class="card">
-                    <img class='card-img' src='${itemCommon.img}'>
+                    <img class='card-img' src='${itenType.img}'>
                 </div>`
 
-            cards.innerHTML += boxCommon
+            cards.innerHTML += boxType
         }
     })
 }
 
-async function qRare(){
+async function factions(parametF){
     cards.innerHTML += ``
-    const qualitieRare = await fetch ('http://localhost:3000/qualities/rare')
-    const rare = await qualitieRare.json()
-    rare.map((itenRare) => {
-        if (itenRare.img){
-            const boxrare =`
+    const factionRota = await fetch (`http://localhost:3000/factions/${parametF}`)
+    const listFaction = await factionRota.json()
+    listFaction.map((itenFaction) => {
+        if (itenFaction.img){
+            const boxFaction =`
                 <div class="card">
-                    <img class='card-img' src='${itenRare.img}'>
+                    <img class='card-img' src='${itenFaction.img}'>
                 </div>`
 
-            cards.innerHTML += boxrare
+            cards.innerHTML += boxFaction
         }
     })
 }
 
-async function qEpic(){
+async function classes(parametC){
     cards.innerHTML += ``
-    const qualitieEpic = await fetch ('http://localhost:3000/qualities/epic')
-    const epic = await qualitieEpic.json()
-    epic.map((itenEpic) => {
-        if (itenEpic.img){
-            const boxEpic =`
+    const classesRota = await fetch (`http://localhost:3000/classes/${parametC}`)
+    const listClass = await classesRota.json()
+    listClass.map((itenClass) => {
+        if (itenClass.img){
+            const boxClass =`
                 <div class="card">
-                    <img class='card-img' src='${itenEpic.img}'>
+                    <img class='card-img' src='${itenClass.img}'>
                 </div>`
 
-            cards.innerHTML += boxEpic
+            cards.innerHTML += boxClass
         }
     })
 }
-
-async function qLegendary(){
-    cards.innerHTML += ``
-    const qualitieLegendary = await fetch ('http://localhost:3000/qualities/legendary')
-    const legendary = await qualitieLegendary.json()
-    legendary.map((itenLegendary) => {
-        if (itenLegendary.img){
-            const boxLegendary =`
-                <div class="card">
-                    <img class='card-img' src='${itenLegendary.img}'>
-                </div>`
-
-            cards.innerHTML += boxLegendary
-        }
-    })
-}
-
-async function tHero(){
-    cards.innerHTML += ``
-    const typeHero = await fetch ('http://localhost:3000/types/hero')
-    const hero = await typeHero.json()
-    hero.map((itenHero) => {
-        if (itenHero.img){
-            const boxHero =`
-                <div class="card">
-                    <img class='card-img' src='${itenHero.img}'>
-                </div>`
-
-            cards.innerHTML += boxHero
-        }
-    })
-}
-
-async function tMinion(){
-    cards.innerHTML += ``
-    const typeMinion = await fetch ('http://localhost:3000/types/minion')
-    const minion = await typeMinion.json()
-    minion.map((itenMinion) => {
-        if (itenMinion.img){
-            const boxMinion =`
-                <div class="card">
-                    <img class='card-img' src='${itenMinion.img}'>
-                </div>`
-
-            cards.innerHTML += boxMinion
-        }
-    })
-}
-
-async function tSpell(){
-    cards.innerHTML += ``
-    const typeSpell = await fetch ('http://localhost:3000/types/spell')
-    const spell = await typeSpell.json()
-    spell.map((itenSpell) => {
-        if (itenSpell.img){
-            const boxSpell =`
-                <div class="card">
-                    <img class='card-img' src='${itenSpell.img}'>
-                </div>`
-
-            cards.innerHTML += boxSpell
-        }
-    })
-}
-
-async function tEnchantment(){
-    cards.innerHTML += ``
-    const typeEnchantment = await fetch ('http://localhost:3000/types/enchantment')
-    const enchantment = await typeEnchantment.json()
-    enchantment.map((itenEnchantment) => {
-        if (itenEnchantment.img){
-            const boxEnchantment =`
-                <div class="card">
-                    <img class='card-img' src='${itenEnchantment.img}'>
-                </div>`
-
-            cards.innerHTML += boxEnchantment
-        }
-    })
-}
-
-async function tWeapon(){
-    cards.innerHTML += ``
-    const typeWeapon = await fetch ('http://localhost:3000/types/weapon')
-    const weapon = await typeWeapon.json()
-    weapon.map((itenWeapon) => {
-        if (itenWeapon.img){
-            const boxWeapon =`
-                <div class="card">
-                    <img class='card-img' src='${itenWeapon.img}'>
-                </div>`
-
-            cards.innerHTML += boxWeapon
-        }
-    })
-}
-
-async function tHeroPower(){
-    cards.innerHTML += ``
-    const typeHeroPower = await fetch ('http://localhost:3000/types/hero-power')
-    const heroPower = await typeHeroPower.json()
-    heroPower.map((itenHeroPower) => {
-        if (itenHeroPower.img){
-            const boxHeroPower =`
-                <div class="card">
-                    <img class='card-img' src='${itenHeroPower.img}'>
-                </div>`
-
-            cards.innerHTML += boxHeroPower
-        }
-    })
-}
-
-

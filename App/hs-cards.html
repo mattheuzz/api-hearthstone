@@ -31,6 +31,7 @@
                       <option value="qEpic">Epic</option>
                       <option value="qLegendary">Legendary</option>                    
                     </select>
+                   
                     <label for="cardsT">Types:</label>
                     <select name="cardsT" id="cardsT">
                       <option value=""></option>                    
@@ -41,6 +42,7 @@
                       <option value="enchantment">Enchantment</option>  
                       <option value="hero-power">Hero Power</option>                  
                     </select>
+                    
                     <label for="cardsF">Factions:</label>
                     <select name="cardsF" id="cardsF">
                       <option value=""></option>                    
@@ -48,16 +50,32 @@
                       <option value="neutral">Neutral</option>                    
                       <option value="alliance">Alliance</option>                                        
                     </select>
+
+                    <label for="cardsC">Classes:</label>
+                    <select name="cardsC" id="cardsC">
+                      <option value=""></option>                    
+                      <option value="death-knight">Death Knight</option>                    
+                      <option value="druid">Druid</option>                    
+                      <option value="mage">Mage</option>
+                      <option value="paladin">Paladin</option>
+                      <option value="priest">Priest</option>
+                      <option value="hunter">Hunter</option>
+                      <option value="rogue">Rogue</option>
+                      <option value="shaman">Shaman</option>
+                      <option value="warlock">Warlock</option>     
+                      <option value="Warrior">Warrior</option>
+                      <option value="neutral">Neutral</option>
+                      <option value="dream">Dream</option>
+                      <option value="whizbang">Whizbang</option>
+                      <option value="demon-hunter">Demon Hunter</option>                                   
+                    </select>
                 </li>
                 <li class="filter-iten"><input class="bt-filter" type="button" onclick="selected()" value="Filter"></li>
             </ol>
         </section>
         <section id="cards"></section>
     </main>
-    <!-- <div id="select-horde">
 
-    </div> -->
-
-    <script src="/Api/front.js"></script>
+    <script src="../Api/front.js"></script>
 </body>
 </html>
