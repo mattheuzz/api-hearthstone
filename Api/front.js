@@ -3,190 +3,685 @@ const cardsQ = document.getElementById('cardsQ')
 const cardsF = document.getElementById('cardsF')
 const cardsT = document.getElementById('cardsT')
 const cardsC = document.getElementById('cardsC')
+const qtd = document.getElementById('qtd')
 
 const selected = () => {
     const valor = cardsQ.value
+    const valorqtd = qtd.value
     if (valor == 'qCommon') {
-        const parametQ = 'common'
-        qualitie(parametQ)
-        console.log(valor)
+        if (valorqtd == '0'){
+            const parametRout = 'qualities'
+            const parametQ = 'common'
+            sourch(parametRout, parametQ, 0)
+            console.log(valor)
+        } else if (valorqtd == '30'){
+            const parametRout = 'qualities'
+            const parametQ = 'common'
+            sourch(parametRout, parametQ, 30)
+            console.log(valor)
+        } else if (valorqtd == '60'){
+            const parametRout = 'qualities'
+            const parametQ = 'common'
+            sourch(parametRout, parametQ, 60)
+            console.log(valor)
+        } else if (valorqtd == '90'){
+            const parametRout = 'qualities'
+            const parametQ = 'common'
+            sourch(parametRout, parametQ, 90)
+            console.log(valor)
+        }
+
     } else if (valor == 'qFree') {
-        const parametQ = 'free'
-        qualitie(parametQ)
-        console.log(valor)
+        if (valorqtd == '0'){
+            const parametRout = 'qualities'
+            const parametQ = 'free'
+            sourch(parametRout, parametQ, 0)
+            console.log(valor)
+        } else if (valorqtd == '30'){
+            const parametRout = 'qualities'
+            const parametQ = 'free'
+            sourch(parametRout, parametQ, 30)
+            console.log(valor)
+        } else if (valorqtd == '60'){
+            const parametRout = 'qualities'
+            const parametQ = 'free'
+            sourch(parametRout, parametQ, 60)
+            console.log(valor)
+        } else if (valorqtd == '90'){
+            const parametRout = 'qualities'
+            const parametQ = 'free'
+            sourch(parametRout, parametQ, 90)
+            console.log(valor)
+        }
+
     } else if (valor == 'qRare') {
-        const parametQ = 'rare'
-        qualitie(parametQ)
-        console.log(valor)
+        if (valorqtd == '0'){
+            const parametRout = 'qualities'
+            const parametQ = 'rare'
+            sourch(parametRout, parametQ, 0)
+            console.log(valor)
+        } else if (valorqtd == '30'){
+            const parametRout = 'qualities'
+            const parametQ = 'rare'
+            sourch(parametRout, parametQ, 30)
+            console.log(valor)
+        } else if (valorqtd == '60'){
+            const parametRout = 'qualities'
+            const parametQ = 'rare'
+            sourch(parametRout, parametQ, 60)
+            console.log(valor)
+        } else if (valorqtd == '90'){
+            const parametRout = 'qualities'
+            const parametQ = 'rare'
+            sourch(parametRout, parametQ, 90)
+            console.log(valor)
+        }
+
     } else if (valor == 'qEpic') {
-        const parametQ = 'epic'
-        qualitie(parametQ)
-        console.log(valor)
+        if (valorqtd == '0'){
+            const parametRout = 'qualities'
+            const parametQ = 'epic'
+            sourch(parametRout, parametQ, 0)
+            console.log(valor)
+        } else if (valorqtd == '30'){
+            const parametRout = 'qualities'
+            const parametQ = 'epic'
+            sourch(parametRout, parametQ, 30)
+            console.log(valor)
+        } else if (valorqtd == '60'){
+            const parametRout = 'qualities'
+            const parametQ = 'epic'
+            sourch(parametRout, parametQ, 60)
+            console.log(valor)
+        } else if (valorqtd == '90'){
+            const parametRout = 'qualities'
+            const parametQ = 'epic'
+            sourch(parametRout, parametQ, 90)
+            console.log(valor)
+        }
     } else if (valor == 'qLegendary') {
-        const parametQ = 'legendary'
-        qualitie(parametQ)
-        console.log(valor)
+        if (valorqtd == '0'){
+            const parametRout = 'qualities'
+            const parametQ = 'legendary'
+            sourch(parametRout, parametQ, 0)
+            console.log(valor)
+        } else if (valorqtd == '30'){
+            const parametRout = 'qualities'
+            const parametQ = 'legendary'
+            sourch(parametRout, parametQ, 30)
+            console.log(valor)
+        } else if (valorqtd == '60'){
+            const parametRout = 'qualities'
+            const parametQ = 'legendary'
+            sourch(parametRout, parametQ, 60)
+            console.log(valor)
+        } else if (valorqtd == '90'){
+            const parametRout = 'qualities'
+            const parametQ = 'legendary'
+            sourch(parametRout, parametQ, 90)
+            console.log(valor)
+        }
     }
+
+
     const tvalor = cardsT.value
     if (tvalor == 'hero') {
-        const parametT = 'hero'
-        type(parametT)
-        console.log(tvalor)
+        if (valorqtd == '0'){
+            const parametRout = 'types'
+            const parametT = 'hero'
+            sourch(parametRout, parametT, 0)
+            console.log(tvalor)
+        } else if (valorqtd == '30'){
+            const parametRout = 'types'
+            const parametT = 'hero'
+            sourch(parametRout, parametT, 30)
+            console.log(tvalor)
+        } else if (valorqtd == '60'){
+            const parametRout = 'types'
+            const parametT = 'hero'
+            sourch(parametRout, parametT, 60)
+            console.log(tvalor)
+        } else if (valorqtd == '90'){
+            const parametRout = 'types'
+            const parametT = 'hero'
+            sourch(parametRout, parametT, 90)
+            console.log(tvalor)
+        }
+
     } else if (tvalor == 'minion') {
-        const parametT = 'minion'
-        type(parametT)
-        console.log(tvalor)
+        if (valorqtd == '0'){
+            const parametRout = 'types'
+            const parametT = 'minion'
+            sourch(parametRout, parametT, 0)
+            console.log(tvalor)
+        } else if (valorqtd == '30'){
+            const parametRout = 'types'
+            const parametT = 'minion'
+            sourch(parametRout, parametT, 30)
+            console.log(tvalor)
+        } else if (valorqtd == '60'){
+            const parametRout = 'types'
+            const parametT = 'minion'
+            sourch(parametRout, parametT, 60)
+            console.log(tvalor)
+        } else if (valorqtd == '90'){
+            const parametRout = 'types'
+            const parametT = 'minion'
+            sourch(parametRout, parametT, 90)
+            console.log(tvalor)
+        }
+
     } else if (tvalor == 'spell') {
-        const parametT = 'spell'
-        type(parametT)
-        console.log(tvalor)
+        if (valorqtd == '0'){
+            const parametRout = 'types'
+            const parametT = 'spell'
+            sourch(parametRout, parametT, 0)
+            console.log(tvalor)
+        } else if (valorqtd == '30'){
+            const parametRout = 'types'
+            const parametT = 'spell'
+            sourch(parametRout, parametT, 30)
+            console.log(tvalor)
+        } else if (valorqtd == '60'){
+            const parametRout = 'types'
+            const parametT = 'spell'
+            sourch(parametRout, parametT, 60)
+            console.log(tvalor)
+        } else if (valorqtd == '90'){
+            const parametRout = 'types'
+            const parametT = 'spell'
+            sourch(parametRout, parametT, 90)
+            console.log(tvalor)
+        }
+
     } else if (tvalor == 'weapon') {
-        const parametT = 'weapon'
-        type(parametT)
-        console.log(tvalor)
+        if (valorqtd == '0'){
+            const parametRout = 'types'
+            const parametT = 'weapon'
+            sourch(parametRout, parametT, 0)
+            console.log(tvalor)
+        } else if (valorqtd == '30'){
+            const parametRout = 'types'
+            const parametT = 'weapon'
+            sourch(parametRout, parametT, 30)
+            console.log(tvalor)
+        } else if (valorqtd == '60'){
+            const parametRout = 'types'
+            const parametT = 'weapon'
+            sourch(parametRout, parametT, 60)
+            console.log(tvalor)
+        } else if (valorqtd == '90'){
+            const parametRout = 'types'
+            const parametT = 'weapon'
+            sourch(parametRout, parametT, 90)
+            console.log(tvalor)
+        }
+
     } else if (tvalor == 'enchantment') {
-        const parametT = 'enchantment'
-        type(parametT)
-        console.log(tvalor)
+        if (valorqtd == '0'){
+            const parametRout = 'types'
+            const parametT = 'enchantment'
+            sourch(parametRout, parametT, 0)
+            console.log(tvalor)
+        } else if (valorqtd == '30'){
+            const parametRout = 'types'
+            const parametT = 'enchantment'
+            sourch(parametRout, parametT, 30)
+            console.log(tvalor)
+        } else if (valorqtd == '60'){
+            const parametRout = 'types'
+            const parametT = 'enchantment'
+            sourch(parametRout, parametT, 60)
+            console.log(tvalor)
+        } else if (valorqtd == '90'){
+            const parametRout = 'types'
+            const parametT = 'enchantment'
+            sourch(parametRout, parametT, 90)
+            console.log(tvalor)
+        }
+
     } else if (tvalor == 'hero-power') {
-        const parametT = 'hero-power'
-        type(parametT)
-        console.log(tvalor)
-    }
+        if (valorqtd == '0'){
+            const parametRout = 'types'
+            const parametT = 'hero-power'
+            sourch(parametRout, parametT, 0)
+            console.log(tvalor)
+        } else if (valorqtd == '30'){
+            const parametRout = 'types'
+            const parametT = 'hero-power'
+            sourch(parametRout, parametT, 30)
+            console.log(tvalor)
+        } else if (valorqtd == '60'){
+            const parametRout = 'types'
+            const parametT = 'hero-power'
+            sourch(parametRout, parametT, 60)
+            console.log(tvalor)
+        } else if (valorqtd == '90'){
+            const parametRout = 'types'
+            const parametT = 'hero-power'
+            sourch(parametRout, parametT, 90)
+            console.log(tvalor)
+        }
+}
+
+
     const fvalor = cardsF.value
     if (fvalor == 'neutral') {
-        const parametF = 'neutral'
-        factions(parametF)
-        console.log(fvalor)
+        if (valorqtd == '0'){
+            const parametF = 'neutral'
+            const parametRout = 'factions'
+            sourch(parametRout, parametF, 0)
+            console.log(fvalor)
+        } else if (valorqtd == '30'){
+            const parametF = 'neutral'
+            const parametRout = 'factions'
+            sourch(parametRout, parametF, 30)
+            console.log(fvalor)
+        } else if (valorqtd == '60'){
+            const parametF = 'neutral'
+            const parametRout = 'factions'
+            sourch(parametRout, parametF, 60)
+            console.log(fvalor)
+        } else if (valorqtd == '90'){
+            const parametF = 'neutral'
+            const parametRout = 'factions'
+            sourch(parametRout, parametF, 90)
+            console.log(fvalor)
+        }
+
     } else if (fvalor == 'horde') {
-        const parametF = 'horde'
-        factions(parametF)
-        console.log(fvalor)
+        if (valorqtd == '0'){
+            const parametRout = 'factions'
+            const parametF = 'horde'
+            sourch(parametRout, parametF, 0)
+            console.log(fvalor)
+        } else if (valorqtd == '30'){
+            const parametRout = 'factions'
+            const parametF = 'horde'
+            sourch(parametRout, parametF, 30)
+            console.log(fvalor)
+        } else if (valorqtd == '60'){
+            const parametRout = 'factions'
+            const parametF = 'horde'
+            sourch(parametRout, parametF, 60)
+            console.log(fvalor)
+        } else if (valorqtd == '90'){
+            const parametRout = 'factions'
+            const parametF = 'horde'
+            sourch(parametRout, parametF, 90)
+            console.log(fvalor)
+        }
+
     } else if (fvalor == 'alliance') {
-        const parametF = 'alliance'
-        factions(parametF)
-        console.log(fvalor)
+        if (valorqtd == '0'){
+            const parametRout = 'factions'
+            const parametF = 'alliance'
+            sourch(parametF, parametRout, 0)
+            console.log( fvalor)
+        } else if (valorqtd == '30'){
+            const parametRout = 'factions'
+            const parametF = 'alliance'
+            sourch(parametRout, parametF, 30)
+            console.log(fvalor)
+        } else if (valorqtd == '60'){
+            const parametRout = 'factions'
+            const parametF = 'alliance'
+            sourch(parametRout, parametF, 60)
+            console.log(fvalor)
+        } else if (valorqtd == '90'){
+            const parametRout = 'factions'
+            const parametF = 'alliance'
+            sourch(parametRout, parametF, 90)
+            console.log(fvalor)
+        }
     }
+
     const cvalor = cardsC.value
     if (cvalor == 'death-knight') {
-        const parametC = 'death-knight'
-        classes(parametC)
-        console.log(cvalor)
+        if (valorqtd == '0'){    
+            const parametRout = 'classes'
+            const parametC = 'death-knight'
+            sourch(parametRout, parametC, 0)
+            console.log(cvalor)
+        } else if (valorqtd == '30'){    
+            const parametRout = 'classes'
+            const parametC = 'death-knight'
+            sourch(parametRout, parametC, 30)
+            console.log(cvalor)
+        } else if (valorqtd == '60'){    
+            const parametRout = 'classes'
+            const parametC = 'death-knight'
+            sourch(parametRout, parametC, 60)
+            console.log(cvalor)
+        } else if (valorqtd == '90'){    
+            const parametRout = 'classes'
+            const parametC = 'death-knight'
+            sourch(parametRout, parametC, 90)
+            console.log(cvalor)
+        }
+    
     } else if (cvalor == 'druid') {
-        const parametC = 'druid'
-        classes(parametC)
-        console.log(cvalor)
+        if (valorqtd == '0'){
+            const parametRout = 'classes'
+            const parametC = 'druid'
+            sourch(parametRout, parametC, 0)
+            console.log(cvalor)
+        } else if (valorqtd == '30'){
+            const parametRout = 'classes'
+            const parametC = 'druid'
+            sourch(parametRout, parametC, 30)
+            console.log(cvalor)
+        } else if (valorqtd == '60'){
+            const parametRout = 'classes'
+            const parametC = 'druid'
+            sourch(parametRout, parametC, 60)
+            console.log(cvalor)
+        } else if (valorqtd == '90'){
+            const parametRout = 'classes'
+            const parametC = 'druid'
+            sourch(parametRout, parametC, 90)
+            console.log(cvalor)
+        }
+
     } else if (cvalor == 'mage') {
-        const parametC = 'mage'
-        classes(parametC)
-        console.log(cvalor)
+        if (valorqtd == '0'){    
+            const parametRout = 'classes'
+            const parametC = 'mage'
+            sourch(parametRout, parametC, 0)
+            console.log(cvalor)
+        } else if (valorqtd == '30'){    
+            const parametRout = 'classes'
+            const parametC = 'mage'
+            sourch(parametRout, parametC, 30)
+            console.log(cvalor)
+        } else if (valorqtd == '60'){    
+            const parametRout = 'classes'
+            const parametC = 'mage'
+            sourch(parametRout, parametC, 60)
+            console.log(cvalor)
+        } else if (valorqtd == '90'){    
+            const parametRout = 'classes'
+            const parametC = 'mage'
+            sourch(parametRout, parametC, 90)
+            console.log(cvalor)
+        }
+    
     } else if (cvalor == 'paladin') {
-        const parametC = 'paladin'
-        classes(parametC)
-        console.log(cvalor)
+        if (valorqtd == '0'){
+            const parametRout = 'classes'
+            const parametC = 'paladin'
+            sourch(parametRout, parametC, 0)
+            console.log(cvalor)
+        } else if (valorqtd == '30'){
+            const parametRout = 'classes'
+            const parametC = 'paladin'
+            sourch(parametRout, parametC, 30)
+            console.log(cvalor)
+        } else if (valorqtd == '60'){
+            const parametRout = 'classes'
+            const parametC = 'paladin'
+            sourch(parametRout, parametC, 60)
+            console.log(cvalor)
+        } else if (valorqtd == '90'){
+            const parametRout = 'classes'
+            const parametC = 'paladin'
+            sourch(parametRout, parametC, 90)
+            console.log(cvalor)
+        }
+    
     } else if (cvalor == 'priest') {
-        const parametC = 'priest'
-        classes(parametC)
-        console.log(cvalor)
+        if (valorqtd == '0'){
+            const parametRout = 'classes'
+            const parametC = 'priest'
+            sourch(parametRout, parametC, 0)
+            console.log(cvalor)
+        } else if (valorqtd == '30'){
+            const parametRout = 'classes'
+            const parametC = 'priest'
+            sourch(parametRout, parametC, 30)
+            console.log(cvalor)
+        } else if (valorqtd == '60'){
+            const parametRout = 'classes'
+            const parametC = 'priest'
+            sourch(parametRout, parametC, 60)
+            console.log(cvalor)
+        } else if (valorqtd == '90'){
+            const parametRout = 'classes'
+            const parametC = 'priest'
+            sourch(parametRout, parametC, 90)
+            console.log(cvalor)
+        }
+
     } else if (cvalor == 'hunter') {
-        const parametC = 'hunter'
-        classes(parametC)
-        console.log(cvalor)
+        if (valorqtd == '0'){
+            const parametRout = 'classes'
+            const parametC = 'hunter'
+            sourch(parametRout, parametC, 0)
+            console.log(cvalor)
+        } else if (valorqtd == '30'){
+            const parametRout = 'classes'
+            const parametC = 'hunter'
+            sourch(parametRout, parametC, 30)
+            console.log(cvalor)
+        } else if (valorqtd == '60'){
+            const parametRout = 'classes'
+            const parametC = 'hunter'
+            sourch(parametRout, parametC, 60)
+            console.log(cvalor)
+        } else if (valorqtd == '90'){
+            const parametRout = 'classes'
+            const parametC = 'hunter'
+            sourch(parametRout, parametC, 90)
+            console.log(cvalor)
+        }
+
     } else if (cvalor == 'rogue') {
-        const parametC = 'rogue'
-        classes(parametC)
-        console.log(cvalor)
+        if (valorqtd == '0'){
+            const parametRout = 'classes'
+            const parametC = 'rogue'
+            sourch(parametRout, parametC, 0)
+            console.log(cvalor)
+        } else if (valorqtd == '30'){
+            const parametRout = 'classes'
+            const parametC = 'rogue'
+            sourch(parametRout, parametC, 30)
+            console.log(cvalor)
+        } else if (valorqtd == '60'){
+            const parametRout = 'classes'
+            const parametC = 'rogue'
+            sourch(parametRout, parametC, 60)
+            console.log(cvalor)
+        } else if (valorqtd == '90'){
+            const parametRout = 'classes'
+            const parametC = 'rogue'
+            sourch(parametRout, parametC, 90)
+            console.log(cvalor)
+        }
+
     } else if (cvalor == 'shaman') {
-        const parametC = 'shaman'
-        classes(parametC)
-        console.log(cvalor)
+        if (valorqtd == '0'){
+            const parametRout = 'classes'
+            const parametC = 'shaman'
+            sourch(parametRout, parametC, 0)
+            console.log(cvalor)
+        } else if (valorqtd == '30'){
+            const parametRout = 'classes'
+            const parametC = 'shaman'
+            sourch(parametRout, parametC, 30)
+            console.log(cvalor)
+        } else if (valorqtd == '60'){
+            const parametRout = 'classes'
+            const parametC = 'shaman'
+            sourch(parametRout, parametC, 60)
+            console.log(cvalor)
+        } else if (valorqtd == '90'){
+            const parametRout = 'classes'
+            const parametC = 'shaman'
+            sourch(parametRout, parametC, 90)
+            console.log(cvalor)
+        }
+
     } else if (cvalor == 'warlock') {
-        const parametC = 'warlock'
-        classes(parametC)
-        console.log(cvalor)
+        if (valorqtd == '0'){
+            const parametRout = 'classes'
+            const parametC = 'warlock'
+            sourch(parametRout, parametC, 0)
+            console.log(cvalor)
+        } else if (valorqtd == '30'){
+            const parametRout = 'classes'
+            const parametC = 'warlock'
+            sourch(parametRout, parametC, 30)
+            console.log(cvalor)
+        } else if (valorqtd == '60'){
+            const parametRout = 'classes'
+            const parametC = 'warlock'
+            sourch(parametRout, parametC, 60)
+            console.log(cvalor)
+        } else if (valorqtd == '90'){
+            const parametRout = 'classes'
+            const parametC = 'warlock'
+            sourch(parametRout, parametC, 90)
+            console.log(cvalor)
+        }
+    
     } else if (cvalor == 'warrior') {
-        const parametC = 'warrior'
-        classes(parametC)
-        console.log(cvalor)
+        if (valorqtd == '0'){
+            const parametRout = 'classes'
+            const parametC = 'warrior'
+            sourch(parametRout, parametC, 0)
+            console.log(cvalor)
+        } else if (valorqtd == '30'){
+            const parametRout = 'classes'
+            const parametC = 'warrior'
+            sourch(parametRout, parametC, 30)
+            console.log(cvalor)
+        } else if (valorqtd == '60'){
+            const parametRout = 'classes'
+            const parametC = 'warrior'
+            sourch(parametRout, parametC, 60)
+            console.log(cvalor)
+        } else if (valorqtd == '90'){
+            const parametRout = 'classes'
+            const parametC = 'warrior'
+            sourch(parametRout, parametC, 90)
+            console.log(cvalor)
+        }
+
     } else if (cvalor == 'neutral') {
-        const parametC = 'neutral'
-        classes(parametC)
-        console.log(cvalor)
+        if (valorqtd == '0'){
+            const parametRout = 'classes'
+            const parametC = 'neutral'
+            sourch(parametRout, parametC, 0)
+            console.log(cvalor)
+        } else if (valorqtd == '30'){
+            const parametRout = 'classes'
+            const parametC = 'neutral'
+            sourch(parametRout, parametC, 30)
+            console.log(cvalor)
+        } else if (valorqtd == '60'){
+            const parametRout = 'classes'
+            const parametC = 'neutral'
+            sourch(parametRout, parametC, 60)
+            console.log(cvalor)
+        } else if (valorqtd == '90'){
+            const parametRout = 'classes'
+            const parametC = 'neutral'
+            sourch(parametRout, parametC, 90)
+            console.log(cvalor)
+        }
+
     } else if (cvalor == 'dream') {
-        const parametC = 'dream'
-        classes(parametC)
-        console.log(cvalor)
+        if (valorqtd == '0'){
+            const parametRout = 'classes'
+            const parametC = 'dream'
+            sourch(parametRout, parametC, 0)
+            console.log(cvalor)
+        } else if (valorqtd == '30'){
+            const parametRout = 'classes'
+            const parametC = 'dream'
+            sourch(parametRout, parametC, 30)
+            console.log(cvalor)
+        } else if (valorqtd == '60'){
+            const parametRout = 'classes'
+            const parametC = 'dream'
+            sourch(parametRout, parametC, 60)
+            console.log(cvalor)
+        } else if (valorqtd == '90'){
+            const parametRout = 'classes'
+            const parametC = 'dream'
+            sourch(parametRout, parametC, 90)
+            console.log(cvalor)
+        }
+    
     } else if (cvalor == 'whizbang') {
-        const parametC = 'whizbang'
-        classes(parametC)
-        console.log(cvalor)
+        if (valorqtd == '0'){
+            const parametRout = 'classes'
+            const parametC = 'whizbang'
+            sourch(parametRout, parametC, 0)
+            console.log(cvalor)
+        } else if (valorqtd == '30'){
+            const parametRout = 'classes'
+            const parametC = 'whizbang'
+            sourch(parametRout, parametC, 30)
+            console.log(cvalor)
+        } else if (valorqtd == '60'){
+            const parametRout = 'classes'
+            const parametC = 'whizbang'
+            sourch(parametRout, parametC, 60)
+            console.log(cvalor)
+        } else if (valorqtd == '90'){
+            const parametRout = 'classes'
+            const parametC = 'whizbang'
+            sourch(parametRout, parametC, 90)
+            console.log(cvalor)
+        }
+
     } else if (cvalor == 'demon-hunter') {
-        const parametC = 'demon-hunter'
-        classes(parametC)
-        console.log(cvalor)
+        if (valorqtd == '0'){
+            const parametRout = 'classes'
+            const parametC = 'demon-hunter'
+            sourch(parametRout, parametC, 0)
+            console.log(cvalor)
+        } else if (valorqtd == '30'){
+            const parametRout = 'classes'
+            const parametC = 'demon-hunter'
+            sourch(parametRout, parametC, 30)
+            console.log(cvalor)
+        } else if (valorqtd == '60'){
+            const parametRout = 'classes'
+            const parametC = 'demon-hunter'
+            sourch(parametRout, parametC, 60)
+            console.log(cvalor)
+        } else if (valorqtd == '90'){
+            const parametRout = 'classes'
+            const parametC = 'demon-hunter'
+            sourch(parametRout, parametC, 90)
+            console.log(cvalor)
+        }
     }
 }
 
-async function qualitie(parametQ){
+async function sourch(parametRout, parametQ, pageSize){
     cards.innerHTML += ``
-    const qualitieRota = await fetch (`http://localhost:3000/qualities/${parametQ}`)
-    const listQualitie = await qualitieRota.json()
-    listQualitie.map((itenQualitie) => {
-        if (itenQualitie.img){
-            const boxqualitie =`
+    const route = await fetch (`http://localhost:3000/${parametRout}/${parametQ}?pageSize=${pageSize}`)
+    const list = await route.json()
+    list.map((iten) => {
+        if (iten.img){
+            const boxcard =`
                 <div class="card">
-                    <img class='card-img' src='${itenQualitie.img}'>
+                    <img class='card-img' src='${iten.img}'>
+                    <h4 class="card-name>${iten.name}</h4>
                 </div>`
 
-            cards.innerHTML += boxqualitie
-        }
-    })
-}
-
-async function type(parametT){
-    cards.innerHTML += ``
-    const typeRota = await fetch (`http://localhost:3000/types/${parametT}`)
-    const listType = await typeRota.json()
-    listType.map((itenType) => {
-        if (itenType.img){
-            const boxType =`
-                <div class="card">
-                    <img class='card-img' src='${itenType.img}'>
-                </div>`
-
-            cards.innerHTML += boxType
-        }
-    })
-}
-
-async function factions(parametF){
-    cards.innerHTML += ``
-    const factionRota = await fetch (`http://localhost:3000/factions/${parametF}`)
-    const listFaction = await factionRota.json()
-    listFaction.map((itenFaction) => {
-        if (itenFaction.img){
-            const boxFaction =`
-                <div class="card">
-                    <img class='card-img' src='${itenFaction.img}'>
-                </div>`
-
-            cards.innerHTML += boxFaction
-        }
-    })
-}
-
-async function classes(parametC){
-    cards.innerHTML += ``
-    const classesRota = await fetch (`http://localhost:3000/classes/${parametC}`)
-    const listClass = await classesRota.json()
-    listClass.map((itenClass) => {
-        if (itenClass.img){
-            const boxClass =`
-                <div class="card">
-                    <img class='card-img' src='${itenClass.img}'>
-                </div>`
-
-            cards.innerHTML += boxClass
-        }
+            cards.innerHTML += boxcard
+        }   else {
+                const boxcard = `
+                            <div class="card">
+                                    <img class="card-img" src="../App/img/carta-vazia.png" alt="image-empty">
+                                    <h4 class="card-name">${iten.name}</h4>
+                            </div>
+                        `
+                cards.innerHTML += boxcard
+            }
     })
 }

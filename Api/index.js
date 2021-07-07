@@ -19,8 +19,11 @@ const types =(type)=>{
 
 app.get('/types/:type', function(req, res){
   const {type}= req.params
+  const { pageSize} = req.query
   axios.request(types(type)).then(function (response) {
-      res.json(response.data)
+    let resp = response.data;
+    resp = resp.splice(0, pageSize);
+    res.json(resp)
     }).catch(function (error) {
         console.error(error);
     })
@@ -40,8 +43,11 @@ const qualities =(qualitie) =>{
 
 app.get('/qualities/:qualitie', function(req, res){
   const {qualitie}= req.params
+  const { pageSize} = req.query
   axios.request(qualities(qualitie)).then(function (response) {
-      res.json(response.data)
+    let resp = response.data;
+    resp = resp.splice(0, pageSize);
+    res.json(resp)
     }).catch(function (error) {
         console.error(error);
     })
@@ -61,8 +67,11 @@ const factions = (faction) => {
 
 app.get('/factions/:faction', function(req, res){
   const {faction}= req.params
+  const { pageSize} = req.query
   axios.request(factions(faction)).then(function (response) {
-    res.json(response.data)
+    let resp = response.data;
+    resp = resp.splice(0, pageSize);
+    res.json(resp)
     }).catch(function (error) {
         console.error(error);
     })
@@ -82,8 +91,11 @@ const classes = (clas) =>{
 
 app.get('/classes/:clas', function(req, res){
   const {clas}= req.params
+  const { pageSize} = req.query
   axios.request(classes(clas)).then(function (response) {
-    res.json(response.data)
+    let resp = response.data;
+    resp = resp.splice(0, pageSize);
+    res.json(resp)
     }).catch(function (error) {
         console.error(error);
     })

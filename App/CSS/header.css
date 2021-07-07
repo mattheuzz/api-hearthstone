@@ -7,7 +7,8 @@
 }
 
 body{
-    background: #e9d9a9;
+    background: url(../img/fundo.png) no-repeat fixed;
+    /*background: #e9d9a9;*/
 }
 
 .head{
@@ -19,6 +20,7 @@ body{
 
 
 .menu{
+    opacity: 0.9;
     display: flex;
     background: rgb(50, 49, 53);    
     border-radius: 15px;
@@ -46,7 +48,7 @@ body{
     color: #ffffff;
 }
 .menu-iten a:hover{
-    color: #030574;
+    color: #fdff7c;
 }
 
 .menu-iten img{
