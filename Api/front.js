@@ -6,8 +6,13 @@ const cardsC = document.getElementById('cardsC')
 const qtd = document.getElementById('qtd')
 
 const selected = () => {
+    let q = 0
+    let quantity = 0
+    q = cardsQ.value
+    quantity = qtd.value
     const valor = cardsQ.value
     const valorqtd = qtd.value
+    
     if (valor == 'qCommon') {
         if (valorqtd == '0'){
             const parametRout = 'qualities'
@@ -123,8 +128,9 @@ const selected = () => {
         }
     }
 
-
-    const tvalor = cardsT.value
+    let t = 0
+    t = cardsT.value
+    const tvalor = t
     if (tvalor == 'hero') {
         if (valorqtd == '0'){
             const parametRout = 'types'
@@ -264,8 +270,9 @@ const selected = () => {
         }
 }
 
-
-    const fvalor = cardsF.value
+    let f = 0
+    f = cardsF.value
+    const fvalor = f
     if (fvalor == 'neutral') {
         if (valorqtd == '0'){
             const parametF = 'neutral'
@@ -336,7 +343,9 @@ const selected = () => {
         }
     }
 
-    const cvalor = cardsC.value
+    let c = 0
+    c = cardsC.value
+    const cvalor = c
     if (cvalor == 'death-knight') {
         if (valorqtd == '0'){    
             const parametRout = 'classes'
@@ -662,7 +671,7 @@ const selected = () => {
 }
 
 async function sourch(parametRout, parametQ, pageSize){
-    cards.innerHTML += ``
+    cards.innerHTML = ``
     const route = await fetch (`http://localhost:3000/${parametRout}/${parametQ}?pageSize=${pageSize}`)
     const list = await route.json()
     list.map((iten) => {
@@ -672,7 +681,7 @@ async function sourch(parametRout, parametQ, pageSize){
                     <img class='card-img' src='${iten.img}'>
                     <h4 class="card-name>${iten.name}</h4>
                 </div>`
-
+            
             cards.innerHTML += boxcard
         }   else {
                 const boxcard = `
@@ -681,6 +690,7 @@ async function sourch(parametRout, parametQ, pageSize){
                                     <h4 class="card-name">${iten.name}</h4>
                             </div>
                         `
+                
                 cards.innerHTML += boxcard
             }
     })
