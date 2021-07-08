@@ -685,3 +685,5 @@ async function sourch(parametRout, parametQ, pageSize){
             }
     })
 }
+
+selected()
